@@ -21,7 +21,7 @@ fn analyze_slice(slice: &[i32]) {
     
 
 fn main() {
-    /*
+    
     // Variables can be type annotated.
     let logical: bool = true;
 
@@ -112,10 +112,6 @@ fn main() {
     println!("{:?}, {:?}, {:?}, {:?}", a, b, c, d); // rozłożona tupla na inty ciekawa sprawa
     let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
     println!("{:?}", matrix);
-
- */
-
-    
 
 
     // Fixed-size array (type signature is superfluous).
