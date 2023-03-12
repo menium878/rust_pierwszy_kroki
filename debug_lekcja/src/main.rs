@@ -36,4 +36,6 @@ fn main() {
 
     // Pretty print
     println!("{:#?}", peter);
+
+    // ogolnie struktury nie pozwalają na wypisywanie ich tylko w trybie debug
 }
