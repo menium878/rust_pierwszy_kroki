@@ -1,0 +1,1 @@
+C:\Users\Menium\Desktop\rust-projekty\rust_podstawy\primitives-podstawowezmienne\target\debug\primitives-podstawowezmienne.exe: C:\Users\Menium\Desktop\rust-projekty\rust_podstawy\primitives-podstawowezmienne\src\main.rs
