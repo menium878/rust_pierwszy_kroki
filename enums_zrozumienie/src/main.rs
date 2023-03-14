@@ -1,3 +1,4 @@
+/* 
 // Create an `enum` to classify a web event. Note how both
 // names and type information together specify the variant:
 // `PageLoad != PageUnload` and `KeyPress(char) != Paste(String)`.
@@ -42,4 +43,20 @@ fn main() {
     inspect(click);
     inspect(load);
     inspect(unload);
+}
+*/
+enum VeryVerboseEnumOfThingsToDoWithNumbers {
+    Add,
+    Subtract,
+}
+
+// Creates a type alias
+type Operations = VeryVerboseEnumOfThingsToDoWithNumbers;
+
+fn main() {
+    // We can refer to each variant via its alias, not its long and inconvenient
+    // name.
+    let _x = Operations::Add;  //używamy _x żeby nie pytał o nieużywaną zmienna
+    let _y = Operations::Subtract;
+    //println!("{} {}",x,y) nie można przy użyciu normalnego println!
 }
