@@ -53,10 +53,22 @@ enum VeryVerboseEnumOfThingsToDoWithNumbers {
 // Creates a type alias
 type Operations = VeryVerboseEnumOfThingsToDoWithNumbers;
 
+
+
+impl VeryVerboseEnumOfThingsToDoWithNumbers {
+    fn run(&self, x: i32, y: i32) -> i32 {
+        match self {
+            Self::Add => x + y,
+            Self::Subtract => x - y,
+        }
+    }
+}
 fn main() {
     // We can refer to each variant via its alias, not its long and inconvenient
     // name.
     let _x = Operations::Add;  //używamy _x żeby nie pytał o nieużywaną zmienna
     let _y = Operations::Subtract;
+
+    println!(x.run(5,3))
     //println!("{} {}",x,y) nie można przy użyciu normalnego println!
 }
