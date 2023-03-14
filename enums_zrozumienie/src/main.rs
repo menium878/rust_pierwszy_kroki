@@ -69,6 +69,6 @@ fn main() {
     let _x = Operations::Add;  //używamy _x żeby nie pytał o nieużywaną zmienna
     let _y = Operations::Subtract;
 
-    println!(x.run(5,3))
+    println!("{}",_x.run(5,3)) //nice
     //println!("{} {}",x,y) nie można przy użyciu normalnego println!
 }
