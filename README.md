@@ -4,3 +4,5 @@
 pamięctać bacon - do sprawdzania błedów na bierząco 
 
 clippy do błędów w pisaniu kodu
+
+No boiler plating 
