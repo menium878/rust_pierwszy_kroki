@@ -24,7 +24,7 @@ fn main() {
         .expect("Age wasn't assigned a number");
     age = age +1;
     println!("I'm {} and I want ${}",age,zmienna)
- */
+ 
 
     //Unsigned int: u8, u16, u32, u64, u128, unsize
     //Signed integer: i8, i16, i32, i64, i128, isize
@@ -36,4 +36,8 @@ fn main() {
     
     let num_1:f32 =1.111111111111111;
     println!("f32:{}", num_1+num_1)
+*/
+    let ranfom_num = rand::thread_rng().gen_range(1..101);
+    println!("Rando : {}",ranfom_num);
+
 }
