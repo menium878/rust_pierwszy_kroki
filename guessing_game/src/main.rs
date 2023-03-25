@@ -5,7 +5,10 @@ fn main() {
 
     let mut guess = String::new();
 
-    io::stdin().read_line(&mut guess).expect("Nie udało się przeczytać inputu");
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Nie udało się przeczytać inputu");
+
     println!("Zgadłeś {}",guess);
 
 }
