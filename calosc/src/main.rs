@@ -7,5 +7,9 @@ use std::fs::File;
 use std::cmp::Ordering;
 
 fn main() {
+    println!("Jakie jest Twoje imię?");
+    let mut imie=String::new();
+    let powitanie="Miło Cię poznać";
+    io::stdin().read_line(&mut imie).expect("Nie otrzymałem inputu");
     println!("Hello, world!");
 }
