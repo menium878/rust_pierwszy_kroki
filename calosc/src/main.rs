@@ -31,4 +31,9 @@ fn main() {
 
     println!("Max u32 {}",u32::MAX); // Ile zajmuje
     println!("Max i32 {}",i32::MAX); 
+
+    let _is_true=true;
+    
+    let num_1:f32 =1.111111111111111;
+    println!("f32:{}", num_1+num_1)
 }
