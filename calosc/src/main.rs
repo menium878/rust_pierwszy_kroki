@@ -1,5 +1,6 @@
 //#![allow(unused)] jeżeli chcemy żeby compilator nie krzzyczał o nieużywane zmienne
 
+use std::char::MAX;
 use std::io;
 use rand::Rng;
 use std::io::{Write,BufReader,BufRead,ErrorKind};
@@ -40,7 +41,7 @@ fn main() {
     let ranfom_num = rand::thread_rng().gen_range(1..101);
     println!("Rando : {}",ranfom_num);
 
-    */
+    
     let age=8;
     if !(1..=18).contains(&age){ //fajny syntax
         println!("Important Bday 1");
@@ -58,4 +59,13 @@ fn main() {
         false
     };
     println!("Can Vote: {}",can_vote)
+    */
+
+    let age2 =8;
+    match age2 {
+        1..=18 =>println!("Important Bday"),
+        21 | 50 => println!("Important Bday"),
+        65..=i32::MAX => println!("Important Bday"),
+        _ => println!("Nieważne")
+    }
 }
