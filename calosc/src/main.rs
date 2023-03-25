@@ -68,4 +68,12 @@ fn main() {
         65..=i32::MAX => println!("Important Bday"),
         _ => println!("Nieważne")
     }
+
+    let my_age = 18;
+    let voting_age =18;
+    match my_age.cmp(&voting_age){
+        Ordering::Less => println!("Can't vote"),
+        Ordering::Greater => println!("Can vote"),
+        Ordering::Equal => println!("You gain the right to vote"),
+    };
 }
