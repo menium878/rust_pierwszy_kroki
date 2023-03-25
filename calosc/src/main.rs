@@ -36,8 +36,26 @@ fn main() {
     
     let num_1:f32 =1.111111111111111;
     println!("f32:{}", num_1+num_1)
-*/
+
     let ranfom_num = rand::thread_rng().gen_range(1..101);
     println!("Rando : {}",ranfom_num);
 
+    */
+    let age=8;
+    if !(1..=18).contains(&age){ //fajny syntax
+        println!("Important Bday 1");
+    }else if (age ==21) || (age==50){
+        println!("Important Bday 2");
+    }else if age >65 {
+        println!("Important Bday");
+    }else{
+        println!("Not important Bday");
+    }
+    let my_age = 47;
+    let can_vote=if my_age>=18{
+        true
+    }else{
+        false
+    };
+    println!("Can Vote: {}",can_vote)
 }
