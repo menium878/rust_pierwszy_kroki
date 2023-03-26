@@ -187,10 +187,28 @@ fn main() {
         Some(secound) =>println!("2nd {}",secound),
         None => println!("No 2nd value"),
     }
-
+    
     for i in &mut vec2{ //to jeśli chcemy iterować po vektorze i zmienić jego wartości referencja do vec czyli &mut vec2
         println!("{}",*i);
         *i *=2; // dereferencja do wartości i bo odnośmy się do referencji bo i jest &mut i32 w tym przypadku
         println!("{}",i);
     }
+
+    let mut a =String::from("ab"); 
+    let mut b =&a; // jak przekaże tak to mam tylko referencje nie mam możliwości zminay zawartości
+    //b.push('2'); // czyli to nie działa
+    println!("{:p}",&a); //ten sam adres
+    println!("{:p}",&b); //ten sam adres
+
+    let mut a =String::from("ab"); 
+    println!("{:p}",&a); 
+    let mut b =&mut a; // daje mu możliwość zmiany wartości
+    b.push('2'); // jak zrobie coś takiego to mam wszystko od a 
+    //println!("{:p}",&a); //to już nie działa oddał w całości do b
+    println!("{:p}",b); 
+    let b =2;
+    println!("{:p}",&b); 
+    println!("{:p}",&a); //oddaliśmy do a bo b przestało istnieć
+
+
 }
