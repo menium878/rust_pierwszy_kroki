@@ -1,4 +1,4 @@
-//#![allow(unused)] jeżeli chcemy żeby compilator nie krzzyczał o nieużywane zmienne
+#![allow(unused)] //jeżeli chcemy żeby compilator nie krzzyczał o nieużywane zmienne
 
 use std::char::MAX;
 use std::io;
@@ -151,27 +151,46 @@ fn main() {
     // let st_1:String = int_u8.to_string();
     // println!("{}",st_1);
 
-    enum Day{
-       Monday,
-       Tuesday,
-       Wensday,
-       Thursday,
-       Friday,
-       Saturday,
-       Sunday
+    // enum Day{
+    //    Monday,
+    //    Tuesday,
+    //    Wensday,
+    //    Thursday,
+    //    Friday,
+    //    Saturday,
+    //    Sunday
+    // }
+    // impl Day{
+    //     fn is_weekend(&self) ->bool {
+    //         match self{
+    //             Day::Saturday | Day::Sunday => true,
+    //             _  => false,
+    //         }
+    //     }
+    // }
+    // let today:Day = Day::Monday;
+    // match today{
+    //     Day::Monday => println!("Everybody hatest Monday"),
+    //     _ => println!("It's not Monday")
+    // }
+    // println!("{}",Day::is_weekend(&today));
+
+    //Vector the same type like array
+
+    let vec1:Vec<i32> = Vec::new();
+    let mut vec2 = vec![1,2,3,4];
+    vec2.push(5);
+    println!("{}",vec2[0]);
+    println!("{:#?}",vec2);
+    let secound = &vec2[1];
+    match vec2.get(1){
+        Some(secound) =>println!("2nd {}",secound),
+        None => println!("No 2nd value"),
     }
-    impl Day{
-        fn is_weekend(&self) ->bool {
-            match self{
-                Day::Saturday | Day::Sunday => true,
-                _  => false,
-            }
-        }
+
+    for i in &mut vec2{ //to jeśli chcemy iterować po vektorze i zmienić jego wartości referencja do vec czyli &mut vec2
+        println!("{}",*i);
+        *i *=2; // dereferencja do wartości i bo odnośmy się do referencji bo i jest &mut i32 w tym przypadku
+        println!("{}",i);
     }
-    let today:Day = Day::Monday;
-    match today{
-        Day::Monday => println!("Everybody hatest Monday"),
-        _ => println!("It's not Monday")
-    }
-    println!("{}",Day::is_weekend(&today));
 }
