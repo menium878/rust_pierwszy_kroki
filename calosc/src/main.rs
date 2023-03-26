@@ -121,25 +121,33 @@ fn main() {
     // let st2 = st1.replace("A", "Another");
     // println!("{}",st2);
 
-    let st3 = String:: from("x r t b h k k a m c ");
-    let mut v1: Vec<char> = st3.chars().collect(); //vektor to array o nieokreślonej długości ale jako że array to ten sam typ
-    v1.sort(); //sortowanie
-    v1.dedup(); //usuniecie duplikatów
-    for char in v1 {
-        println!("{}",char);
-    }
-    let st4: &str = "Random string";
-    let mut st5:String = st4.to_string();
-    println!("{}",st5);
-    let byte_arr1 = st5.as_bytes(); //array of bytes
-    let st6 =  &st5[0..6]; //slice of string
-    println!("String length : {}",st6.len());
-    st5.clear(); // remove from string if mutable
-    let st6 = String::from("Just some");
-    let st7 = String::from("words");
-    let st8 =st6 + &st7; //&referencja
+    // let st3 = String:: from("x r t b h k k a m c ");
+    // let mut v1: Vec<char> = st3.chars().collect(); //vektor to array o nieokreślonej długości ale jako że array to ten sam typ
+    // v1.sort(); //sortowanie
+    // v1.dedup(); //usuniecie duplikatów
+    // for char in v1 {
+    //     println!("{}",char);
+    // }
+    // let st4: &str = "Random string";
+    // let mut st5:String = st4.to_string();
+    // println!("{}",st5);
+    // let byte_arr1 = st5.as_bytes(); //array of bytes
+    // let st6 =  &st5[0..6]; //slice of string
+    // println!("String length : {}",st6.len());
+    // st5.clear(); // remove from string if mutable
+    // let st6 = String::from("Just some");
+    // let st7 = String::from("words");
+    // let st8 =st6 + &st7; //&referencja
     
-    for char in st8.bytes(){
-        println!("{}",char);
-    }
+    // for char in st8.bytes(){
+    //     println!("{}",char);
+    // }
+
+    //casting
+    let int_u8:u8=5;
+    let int2_u8:u8=4;
+    let int3_u32: u32 = (int_u8 as u32) +(int2_u8 as u32); // casting as specific type
+
+    let st_1:String = int_u8.to_string();
+    println!("{}",st_1);
 }
