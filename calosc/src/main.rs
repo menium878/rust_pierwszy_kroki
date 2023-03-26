@@ -78,13 +78,13 @@ fn main() {
     };
     */
     //Arrays - tablice must me the same datatype fix size
-    let arr_1 = [1,2,3,4];
-    println!("first {}",arr_1[0]);
-    println!("len {}",arr_1.len());
+    // let arr_1 = [1,2,3,4];
+    // println!("first {}",arr_1[0]);
+    // println!("len {}",arr_1.len());
 
-    let arr_2= [1,2,3,4,5,6,7,8,9];
-    println!("first {:#?}",arr_2);
-    let mut loop_idx=0;
+    // let arr_2= [1,2,3,4,5,6,7,8,9];
+    // println!("first {:#?}",arr_2);
+    // let mut loop_idx=0;
     // loop {
     //     if arr_2[loop_idx] % 2 ==0{
     //         loop_idx +=1;
@@ -106,7 +106,40 @@ fn main() {
     // }
     
     //tuple wiele typów
-    let my_tuple:(u8,String,f64) = (47,"Derek".to_string(),32.3);
-    println!("{:#?}",my_tuple);
+    // let my_tuple:(u8,String,f64) = (47,"Derek".to_string(),32.3);
+    // println!("{:#?}",my_tuple);
+    
+    // let (v1,v2,v3) = my_tuple;
+    // println!("{}",v1);
 
+    // let mut st1 = String::new();
+    // st1.push('A'); // push na koniec stringa
+    // st1.push_str(" word");
+    // for word in st1.split_whitespace(){
+    //     println!("{}",word)
+    // }
+    // let st2 = st1.replace("A", "Another");
+    // println!("{}",st2);
+
+    let st3 = String:: from("x r t b h k k a m c ");
+    let mut v1: Vec<char> = st3.chars().collect(); //vektor to array o nieokreślonej długości ale jako że array to ten sam typ
+    v1.sort(); //sortowanie
+    v1.dedup(); //usuniecie duplikatów
+    for char in v1 {
+        println!("{}",char);
+    }
+    let st4: &str = "Random string";
+    let mut st5:String = st4.to_string();
+    println!("{}",st5);
+    let byte_arr1 = st5.as_bytes(); //array of bytes
+    let st6 =  &st5[0..6]; //slice of string
+    println!("String length : {}",st6.len());
+    st5.clear(); // remove from string if mutable
+    let st6 = String::from("Just some");
+    let st7 = String::from("words");
+    let st8 =st6 + &st7; //&referencja
+    
+    for char in st8.bytes(){
+        println!("{}",char);
+    }
 }
