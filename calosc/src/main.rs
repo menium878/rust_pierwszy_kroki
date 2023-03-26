@@ -97,13 +97,16 @@ fn main() {
     //     loop_idx +=1;
     // }
 
-    for value in arr_2.iter(){
-        println!("{}",value)
-    }
+    // for value in arr_2.iter(){
+    //     println!("{}",value)
+    // }
 
-    while loop_idx < arr_2.len(){
-        loop_idx+=1;
-    }
-
+    // while loop_idx < arr_2.len(){
+    //     loop_idx+=1;
+    // }
+    
+    //tuple wiele typów
+    let my_tuple:(u8,String,f64) = (47,"Derek".to_string(),32.3);
+    println!("{:#?}",my_tuple);
 
 }
