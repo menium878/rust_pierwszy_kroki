@@ -97,8 +97,8 @@ fn main() {
     //     loop_idx +=1;
     // }
 
-    for index in arr_2{
-        println!("{}",index)
+    for value in arr_2.iter(){
+        println!("{}",value)
     }
 
     while loop_idx < arr_2.len(){
