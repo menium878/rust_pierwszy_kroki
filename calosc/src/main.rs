@@ -82,5 +82,19 @@ fn main() {
     println!("first {}",arr_1[0]);
     println!("len {}",arr_1.len());
 
+    let arr_2= [1,2,3,4,5,6,7,8,9];
+    println!("first {:#?}",arr_2);
+    let mut loop_idx=0;
+    loop {
+        if arr_2[loop_idx] % 2 ==0{
+            loop_idx +=1;
+            continue;
+        }
+        if arr_2[loop_idx] == 9{
+            break;
+        }
+        println!("Val : {}",arr_2[loop_idx])
+    }
+
 
 }
