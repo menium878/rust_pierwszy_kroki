@@ -93,7 +93,8 @@ fn main() {
         if arr_2[loop_idx] == 9{
             break;
         }
-        println!("Val : {}",arr_2[loop_idx])
+        println!("Val : {}",arr_2[loop_idx]);
+        loop_idx +=1;
     }
 
 
