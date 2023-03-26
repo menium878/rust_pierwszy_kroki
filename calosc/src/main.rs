@@ -59,7 +59,7 @@ fn main() {
         false
     };
     println!("Can Vote: {}",can_vote)
-    */
+    
 
     let age2 =8;
     match age2 {
@@ -76,4 +76,11 @@ fn main() {
         Ordering::Greater => println!("Can vote"),
         Ordering::Equal => println!("You gain the right to vote"),
     };
+    */
+    //Arrays - tablice must me the same datatype fix size
+    let arr_1 = [1,2,3,4];
+    println!("first {}",arr_1[0]);
+    println!("len {}",arr_1.len());
+
+
 }
