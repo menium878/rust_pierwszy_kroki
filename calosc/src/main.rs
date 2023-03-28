@@ -7,7 +7,18 @@ use std::io::{Write,BufReader,BufRead,ErrorKind};
 use std::fs::File;
 use std::cmp::Ordering;
 
+
+fn say_hello(){
+    println!("Hello");
+}
+
+fn get_sum(x:i32,y:i32)-> i32{
+    println!("{} + {} = {}",x,y,x+y);
+    x+y
+}
 fn main() {
+    let a= get_sum(5,4);
+    println!("{}",a);
 /* 
     println!("Jakie jest Twoje imię?");
     let mut imie=String::new();
