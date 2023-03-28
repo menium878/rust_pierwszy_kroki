@@ -25,6 +25,29 @@ use std::cmp::Ordering;
     
 // }
 
+/*
+If you don't need to add or remove elements from the vector, use slice (&[T]) or mutable slice (&mut [T]):
+
+fn find_factors(n: u64, prime_factors: &mut [u64]) { ... }
+
+let mut prime_factors: Vec<u64> = Vec::new();
+find_factors(1134 as u64, prime_factors.as_mut_slice());
+Immutable slices allow you to read elements or create subslices; mutable slices additionally allow to modify elements. But slices cannot grow - they are just a view into some vector.
+
+It looks like you need to append new elements to the vector. You won't be able to do it using slice, as I said; you need to pass the vector itself using mutable reference:
+
+fn find_factors(n: u64, prime_factors: &mut Vec<u64>) {
+    // here you can call e.g. prime_factors.push(...)
+}
+
+let mut prime_factors: Vec<u64> = Vec::new();
+find_factors(1134 as u64, &mut prime_factors);
+
+ */
+
+
+
+
 fn main() {
     // let (a,b)= get_sum(5,4);
     // println!("{} = {}",a,b);
