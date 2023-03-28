@@ -12,13 +12,26 @@ fn say_hello(){
     println!("Hello");
 }
 
-fn get_sum(x:i32,y:i32)-> i32{
+fn get_sum(x:i32,y:i32)-> (i32,i32){
     println!("{} + {} = {}",x,y,x+y);
-    x+y
+    (x+y,y+x)
 }
+fn sum_vec(vektor:&[i32]) -> i32{
+    let mut sum:i32=0;
+    for i in vektor{
+        sum+=i;
+    }
+    sum
+    
+}
+
 fn main() {
-    let a= get_sum(5,4);
-    println!("{}",a);
+    let (a,b)= get_sum(5,4);
+    println!("{} = {}",a,b);
+
+    let num_vec = vec![1,2,3,4];
+    println!("{}",sum_vec(&num_vec));
+
 /* 
     println!("Jakie jest Twoje imię?");
     let mut imie=String::new();
