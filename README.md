@@ -10,3 +10,8 @@ No boiler plating testing video zobaczyć i spróbować napisać
 W celu nauki: https://www.youtube.com/@letsgetrusty i rust by example
 
 Need to check how to use neovim with rust plugin
+
+
+TODO:
+password generator 
+async program learn tokio
