@@ -16,3 +16,5 @@ TODO:
 password generator 
 async program learn tokio
 framework Ast
+
+https://practice.rs/elegant-code-base.html
