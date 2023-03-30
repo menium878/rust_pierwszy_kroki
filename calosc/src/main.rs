@@ -6,6 +6,7 @@ use rand::Rng;
 use std::io::{Write,BufReader,BufRead,ErrorKind};
 use std::fs::File;
 use std::cmp::Ordering;
+use std::collections::{hash_map, HashMap};
 
 
 // fn say_hello(){
@@ -66,11 +67,13 @@ find_factors(1134 as u64, &mut prime_factors);
 //}
 fn main() {
     // let mut str1=String::from("toot");
-    // print_str(&str1); // !muszę skolonować bo inaczej mi umiera w funkcji wartość trochę nie rozumiem jak przekaże go jako referencja do stringa to odda  mi go ale jak 
+    // print_str(&str1); // !muszę skolonować bo inaczej mi umiera w funkcji wartość trochę nie rozumiem albo jak przekaże go jako referencja do stringa to odda  mi go 
     // let a =print_str_return("cos".to_string());
     // println!("{}",a);
     // let mut str2=String::from("cos");
     // change_str(&mut str1,&mut str2);
+
+
 
 
     // println!("{}",get_sum_gen( 5,4));
@@ -283,8 +286,24 @@ fn main() {
     // println!("{:p}",&b); 
     // println!("{:p}",&a); //oddaliśmy do a bo b przestało istni
     
-    let str1 =String::from("World");
-    let str2 = str1.clone();
-    println!("{}",str1);
+    // let str1 =String::from("World");
+    // let str2 = str1.clone();
+    // println!("{}",str1);
 
+    let mut heros = HashMap::new();
+    heros.insert("Superman", "Clark Kent");
+    heros.insert("Batman", "Bruce Wayne");
+    heros.insert("Flash", "Barry Allen");
+
+    for (v,k) in heros.iter(){ //!bardzo ważne pamięctaj iter bo inaczej tracisz kontrole nad wartością lul
+        println!("{}",v);
+        println!("{}",k);
+    }
+    if heros.contains_key(&"Batman"){
+        let the_batman=heros.get(&"Batman");
+        match the_batman {
+            Some(x)=>println!("{}",x),
+            None => println!("nie znalazlo"),
+        }
+    }
 }
