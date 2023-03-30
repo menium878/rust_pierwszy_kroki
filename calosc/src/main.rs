@@ -1,6 +1,7 @@
 #![allow(unused)] //jeżeli chcemy żeby compilator nie krzzyczał o nieużywane zmienne
 
 use std::char::MAX;
+use std::f32::consts::PI;
 use std::io;
 use rand::Rng;
 use std::io::{Write,BufReader,BufRead,ErrorKind};
@@ -81,7 +82,7 @@ fn main() {
         balance: 32.5,
     };
     bob.adress =String::from("Chorzów");
-    println!("{#:?}",bob);
+    
 
 
     struct Rectangle<T,U>{
@@ -92,6 +93,45 @@ fn main() {
         length: 4,
         height: 5.3,
     };
+    trait Shape{
+        fn new(lenght:f32,width: f32) -> Self;
+        fn area(&self)->f32;
+    }
+
+    struct Square{
+        lenght: f32,
+        width: f32,
+    };
+    struct Circle{
+        lenght: f32,
+        width: f32,
+    };
+
+    impl Shape for Square{
+        fn new(lenght:f32,width: f32) -> Square{
+            Square{lenght,width}
+        }
+        fn area(&self)->f32{
+            self.lenght * self.width
+        }
+    }
+    impl Shape for Circle{
+        fn new(lenght:f32,width: f32) -> Circle{
+            Circle{lenght,width}
+        }
+        fn area(&self)->f32{
+            (self.lenght/2.0).powf(2.0)*PI
+        }
+    }
+    let mut x = Square{
+        lenght: 3.2,
+        width: 1.2,
+    };
+    println!("{}",x.area());
+
+    let sq: Square=Shape::new(11.2, 12.5); // !traits ważna sprawa
+    
+    
 
     // let mut str1=String::from("toot");
     // print_str(&str1); // !muszę skolonować bo inaczej mi umiera w funkcji wartość trochę nie rozumiem albo jak przekaże go jako referencja do stringa to odda  mi go 
