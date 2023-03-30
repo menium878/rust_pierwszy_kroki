@@ -65,7 +65,34 @@ find_factors(1134 as u64, &mut prime_factors);
 //     y.push_str("string");
 //     println!("{}{}",x,y);
 //}
+
+
 fn main() {
+
+    struct Customer{
+        name :String,
+        adress: String,
+        balance: f32,
+    }    
+
+    let mut bob =Customer{
+        name: String::from("Bob"),
+        adress: String::from("Katowice"),
+        balance: 32.5,
+    };
+    bob.adress =String::from("Chorzów");
+    println!("{#:?}",bob);
+
+
+    struct Rectangle<T,U>{
+        length: T,
+        height: U,
+    };
+    let rec =Rectangle{
+        length: 4,
+        height: 5.3,
+    };
+
     // let mut str1=String::from("toot");
     // print_str(&str1); // !muszę skolonować bo inaczej mi umiera w funkcji wartość trochę nie rozumiem albo jak przekaże go jako referencja do stringa to odda  mi go 
     // let a =print_str_return("cos".to_string());
@@ -290,20 +317,21 @@ fn main() {
     // let str2 = str1.clone();
     // println!("{}",str1);
 
-    let mut heros = HashMap::new();
-    heros.insert("Superman", "Clark Kent");
-    heros.insert("Batman", "Bruce Wayne");
-    heros.insert("Flash", "Barry Allen");
+    // let mut heros = HashMap::new();
+    // heros.insert("Superman", "Clark Kent");
+    // heros.insert("Batman", "Bruce Wayne");
+    // heros.insert("Flash", "Barry Allen");
 
-    for (v,k) in heros.iter(){ //!bardzo ważne pamięctaj iter bo inaczej tracisz kontrole nad wartością lul
-        println!("{}",v);
-        println!("{}",k);
-    }
-    if heros.contains_key(&"Batman"){
-        let the_batman=heros.get(&"Batman");
-        match the_batman {
-            Some(x)=>println!("{}",x),
-            None => println!("nie znalazlo"),
-        }
-    }
+    // for (v,k) in heros.iter(){ //!bardzo ważne pamięctaj iter bo inaczej tracisz kontrole nad wartością lul
+    //     println!("{}",v);
+    //     println!("{}",k);
+    // }
+    // if heros.contains_key(&"Batman"){
+    //     let the_batman=heros.get(&"Batman");
+    //     match the_batman {
+    //         Some(x)=>println!("{}",x),
+    //         None => println!("nie znalazlo"),
+    //     }
+    // }
+
 }
