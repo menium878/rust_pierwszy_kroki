@@ -44,17 +44,35 @@ let mut prime_factors: Vec<u64> = Vec::new();
 find_factors(1134 as u64, &mut prime_factors);
 
  */
-use std::ops::Add;
+// use std::ops::Add;
 
 
-fn get_sum_gen<T:Add<Output = T>>(x: T,y: T) ->T {
-    x+y
+// fn get_sum_gen<T:Add<Output = T>>(x: T,y: T) ->T {
+//     x+y
+// }
+
+fn print_str(x:&str){
+    println!("{}",x);
 }
 
-
+fn print_str_return(x:String) -> String{
+    println!("{}",x);
+    x
+}
+fn change_str(x:&mut String){
+    x.push_str("alamakota");
+    println!("{}",x);
+}
 fn main() {
-    println!("{}",get_sum_gen( 5,4));
-    println!("{}",get_sum_gen( 5.2,4.3));
+    let mut str1=String::from("toot");
+    print_str(&str1); // muszę skolonować bo inaczej mi umiera w funkcji wartość trochę nie rozumiem
+    let a =print_str_return("cos".to_string());
+    println!("{}",a);
+    change_str(&mut str1);
+
+
+    // println!("{}",get_sum_gen( 5,4));
+    // println!("{}",get_sum_gen( 5.2,4.3));
     // let (a,b)= get_sum(5,4);
     // println!("{} = {}",a,b);
 
@@ -263,6 +281,8 @@ fn main() {
     // println!("{:p}",&b); 
     // println!("{:p}",&a); //oddaliśmy do a bo b przestało istni
     
-
+    let str1 =String::from("World");
+    let str2 = str1.clone();
+    println!("{}",str1);
 
 }
