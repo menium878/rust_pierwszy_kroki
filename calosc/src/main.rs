@@ -44,11 +44,17 @@ let mut prime_factors: Vec<u64> = Vec::new();
 find_factors(1134 as u64, &mut prime_factors);
 
  */
+use std::ops::Add;
 
 
+fn get_sum_gen<T:Add<Output = T>>(x: T,y: T) ->T {
+    x+y
+}
 
 
 fn main() {
+    println!("{}",get_sum_gen( 5,4));
+    println!("{}",get_sum_gen( 5.2,4.3));
     // let (a,b)= get_sum(5,4);
     // println!("{} = {}",a,b);
 
