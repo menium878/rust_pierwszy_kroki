@@ -51,24 +51,26 @@ find_factors(1134 as u64, &mut prime_factors);
 //     x+y
 // }
 
-fn print_str(x:&str){
-    println!("{}",x);
-}
+// fn print_str(x:&str){
+//     println!("{}",x);
+// }
 
-fn print_str_return(x:String) -> String{
-    println!("{}",x);
-    x
-}
-fn change_str(x:&mut String){
-    x.push_str("alamakota");
-    println!("{}",x);
-}
+// fn print_str_return(x:String) -> String{
+//     println!("{}",x);
+//     x
+// }
+// fn change_str(x:&mut String,y:&mut String,){
+//     x.push_str("alamakota");
+//     y.push_str("string");
+//     println!("{}{}",x,y);
+//}
 fn main() {
-    let mut str1=String::from("toot");
-    print_str(&str1); // muszę skolonować bo inaczej mi umiera w funkcji wartość trochę nie rozumiem
-    let a =print_str_return("cos".to_string());
-    println!("{}",a);
-    change_str(&mut str1);
+    // let mut str1=String::from("toot");
+    // print_str(&str1); // !muszę skolonować bo inaczej mi umiera w funkcji wartość trochę nie rozumiem jak przekaże go jako referencja do stringa to odda  mi go ale jak 
+    // let a =print_str_return("cos".to_string());
+    // println!("{}",a);
+    // let mut str2=String::from("cos");
+    // change_str(&mut str1,&mut str2);
 
 
     // println!("{}",get_sum_gen( 5,4));
