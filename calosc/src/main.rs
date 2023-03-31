@@ -66,70 +66,71 @@ find_factors(1134 as u64, &mut prime_factors);
 //     y.push_str("string");
 //     println!("{}{}",x,y);
 //}
-
+mod restauran;
+use crate::restauran::order_food;
 
 fn main() {
+    order_food();
+    // struct Customer{
+    //     name :String,
+    //     adress: String,
+    //     balance: f32,
+    // }    
 
-    struct Customer{
-        name :String,
-        adress: String,
-        balance: f32,
-    }    
-
-    let mut bob =Customer{
-        name: String::from("Bob"),
-        adress: String::from("Katowice"),
-        balance: 32.5,
-    };
-    bob.adress =String::from("Chorzów");
+    // let mut bob =Customer{
+    //     name: String::from("Bob"),
+    //     adress: String::from("Katowice"),
+    //     balance: 32.5,
+    // };
+    // bob.adress =String::from("Chorzów");
     
 
 
-    struct Rectangle<T,U>{
-        length: T,
-        height: U,
-    };
-    let rec =Rectangle{
-        length: 4,
-        height: 5.3,
-    };
-    trait Shape{
-        fn new(lenght:f32,width: f32) -> Self;
-        fn area(&self)->f32;
-    }
+    // struct Rectangle<T,U>{
+    //     length: T,
+    //     height: U,
+    // };
+    // let rec =Rectangle{
+    //     length: 4,
+    //     height: 5.3,
+    // };
+    // trait Shape{
+    //     fn new(lenght:f32,width: f32) -> Self;
+    //     fn area(&self)->f32;
+    // }
 
-    struct Square{
-        lenght: f32,
-        width: f32,
-    };
-    struct Circle{
-        lenght: f32,
-        width: f32,
-    };
+    // struct Square{
+    //     lenght: f32,
+    //     width: f32,
+    // };
+    // struct Circle{
+    //     lenght: f32,
+    //     width: f32,
+    // };
 
-    impl Shape for Square{
-        fn new(lenght:f32,width: f32) -> Square{
-            Square{lenght,width}
-        }
-        fn area(&self)->f32{
-            self.lenght * self.width
-        }
-    }
-    impl Shape for Circle{
-        fn new(lenght:f32,width: f32) -> Circle{
-            Circle{lenght,width}
-        }
-        fn area(&self)->f32{
-            (self.lenght/2.0).powf(2.0)*PI
-        }
-    }
-    let mut x = Square{
-        lenght: 3.2,
-        width: 1.2,
-    };
-    println!("{}",x.area());
+    // impl Shape for Square{
+    //     fn new(lenght:f32,width: f32) -> Square{
+    //         Square{lenght,width}
+    //     }
+    //     fn area(&self)->f32{
+    //         self.lenght * self.width
+    //     }
+    // }
+    // impl Shape for Circle{
+    //     fn new(lenght:f32,width: f32) -> Circle{
+    //         Circle{lenght,width}
+    //     }
+    //     fn area(&self)->f32{
+    //         (self.lenght/2.0).powf(2.0)*PI
+    //     }
+    // }
+    // let mut x = Square{
+    //     lenght: 3.2,
+    //     width: 1.2,
+    // };
+    // println!("{}",x.area());
 
-    let sq: Square=Shape::new(11.2, 12.5); // !traits ważna sprawa
+    // let sq: Square=Shape::new(11.2, 12.5); // !traits ważna sprawa
     
     
 
