@@ -20,7 +20,7 @@ mod pizza_order{
         pub fn take_order(){ //!SUPER is used to acces parent 
             seat_at_table();
             let cust_pizza: super::Pizza=
-                supper::Pizza::lunch("veggies");
+                super::Pizza::lunch("veggies");
                 serve_customer(cust_pizza);
         }
         fn serve_customer(cust_pizza:super::Pizza){
@@ -30,5 +30,5 @@ mod pizza_order{
 }
 
 pub fn order_food(){
-    create::restaurant::pizza_order::help_customer::take_order();
+    crate::restauran::pizza_order::help_customer::take_order();
 }
