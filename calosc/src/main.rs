@@ -421,20 +421,23 @@ fn main() {
     // };
     // println!("Can vote {}",can_vote(8,9));
     
-        let mut samp1 =5;
-        let print_var = || println!("samp1={}",samp1); // ! możemy używać zmienny z poza funkjci to może być przydatna sprawa
-        print_var();
-        samp1 =10;
-        let mut change_var = ||samp1 +=1;
-        change_var();
-        println!("Samp1 = {}",samp1);
-        fn use_func<T>(a:i32,b:i32,func:T)->i32 
-        where T: Fn(i32,i32)->i32{
-            func(a,b)
-        }
-        let sum=|a,b|a+b;
-        let prod=|a,b|a*b;
-        println!("5+4= {}",use_func(5, 4, sum));
-        println!("5*4= {}",use_func(5, 4, prod))
+        // let mut samp1 =5;
+        // let print_var = || println!("samp1={}",samp1); // ! możemy używać zmienny z poza funkjci to może być przydatna sprawa
+        // print_var();
+        // samp1 =10;
+        // let mut change_var = ||samp1 +=1;
+        // change_var();
+        // println!("Samp1 = {}",samp1);
+        // fn use_func<T>(a:i32,b:i32,func:T)->i32 
+        // where T: Fn(i32,i32)->i32{
+        //     func(a,b)
+        // }
+        // let sum=|a,b|a+b;
+        // let prod=|a,b|a*b;
+        // println!("5+4= {}",use_func(5, 4, sum));
+        // println!("5*4= {}",use_func(5, 4, prod))
+
+    // !smart pointers
+    // !&refrence
         
 }
