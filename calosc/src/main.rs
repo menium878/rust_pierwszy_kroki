@@ -405,12 +405,20 @@ fn main() {
     // };
 
     // iterator
-    let mut arr_it =[1,2,3,4];
-    for val in arr_it.iter(){
-        println!("{}",val);
-    }
+    // let mut arr_it =[1,2,3,4];
+    // for val in arr_it.iter(){
+    //     println!("{}",val);
+    // }
 
-    //arr_it.into_iter() // ! pochlaniamy 
-    let mut iter1=arr_it.iter();
-    println!("1st: {:?}",iter1.next());
+    // //arr_it.into_iter() // ! pochlaniamy 
+    // let mut iter1=arr_it.iter();
+    // println!("1st: {:?}",iter1.next());
+
+    //closer unnamed funtion czy coś takiego jak lambda
+    //let var_name = |parameters| -> return_type{BODY};
+    let can_vote=|age:i32|{
+        age>=18
+    };
+    println!("Can vote {}",can_vote(8));
+
 }
