@@ -70,7 +70,7 @@ mod restauran;
 use crate::restauran::order_food;
 
 fn main() {
-    order_food();
+    //order_food();
     // struct Customer{
     //     name :String,
     //     adress: String,
@@ -374,5 +374,33 @@ fn main() {
     //         None => println!("nie znalazlo"),
     //     }
     // }
+    //panic!("Terrible Error");
+    
+    let path ="lines.txt";
+    let output =File::create(path);
+    let mut output = match output{
+        Ok(file)=> file,
+        Err(error)=>
+            panic!("Problem creating file : {:?}",error),
+    };
+    write!(output,"Just some\n Random words").expect("Failed to write to the file");
 
+    let input = File::open(path).unwrap(); // !ignoruje i daje tylko output funkcji
+    let buffered = BufReader::new(input);
+    for line in buffered.lines(){
+        println!("{}",line.unwrap());
+    }
+
+    let output2=File::create("rand.txt");
+    let output2 = match output2{
+        Ok(file)=>file,
+        Err(error)=>match error.kind(){
+            ErrorKind::NotFound =>match File::create("rand.txt") {
+                Ok(fc)=>fc,
+                Err(e)=>panic!("Can't provide file {:?}",e),
+                
+            },
+            _other_error => panic!("Problem opening file: {:?}",error),
+        },
+    };
 }
